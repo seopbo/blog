@@ -56,21 +56,19 @@
     </div>
 
     <!-- Language Selection -->
-    <ul class="nav-lang d-flex" style="margin-right: 10px; margin-bottom: 10px;">
+    <nav id="lang-selector" class="nav-lang d-flex" style="margin-right: 10px;">
       {% for lang in site.languages %}
-      <!-- <li class="nav-item"> -->
         <a class="nav-link" style="margin-right: 10px; {% if lang == site.active_lang %}font-weight: bold; color: grey;{% endif %}text-align:center;" href="{% if lang == site.default_lang %}{{ site.baseurl }}{{ page.url }}{% else %}{{ site.baseurl }}/{{ lang }}{{ page.url }}{% endif %}">
           <a style="{% if lang == site.active_lang %}font-weight: bold; color: grey;{% else %} color: grey;{% endif %}text-align:center;" href="{% if lang == site.default_lang %} {{site.baseurl}}{{page.url}} {% else %} {{site.baseurl}}/{{ lang }}{{page.url}} {% endif %}">
             {% if lang == "ko" %}
-              <span>한국어</span>
+              <span>ko</span>
             {% elsif lang == "en" %}
-              <span>English</span>
+              <span>en</span>
       {% endif %}
           </a>
         </a>
-      <!-- </li> -->
       {% endfor %}
-    </ul>
+    </nav>
 
     <button type="button" id="search-trigger" class="btn btn-link">
       <i class="fas fa-search fa-fw"></i>
