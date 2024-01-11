@@ -6,7 +6,7 @@ plugins:
 # For jekyll-polyglot
 languages: ["ko", "en"]
 default_lang: "ko"
-exclude_from_localization: ["assets"]
+exclude_from_localization: ["assets", "sitemap.xml"]
 parallel_localization: true
 
 # Import the theme
